@@ -247,6 +247,10 @@ type Statistics struct {
 	StdDevRtt time.Duration
 }
 
+func (p *Pinger) SetId(id int) {
+	p.id = id
+}
+
 // SetIPAddr sets the ip address of the target host.
 func (p *Pinger) SetIPAddr(ipaddr *net.IPAddr) {
 	p.ipv4 = isIPv4(ipaddr.IP)
